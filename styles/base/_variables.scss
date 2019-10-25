@@ -1,0 +1,41 @@
+$bg-color: #fffaf0;
+$bg-head-color: rgba(176, 154, 97, 0.83);
+$link-color: #4C8CAA;
+$wt:#fff;
+$bk:#000;
+$dark-color:#4A4A4A;
+$accent-color: #7e9233;
+$focus-color: $accent-color;
+$fz: rem(16);
+$h1-fz: 39;
+$h2-fz: 32;
+$h3-fz: 26;
+$h4-fz: 22;
+$h5-fz: 18;
+$h6-fz: 16;
+$btn-color: #de5443;
+$placeholder-color: #000;
+$fz-placeholder: 16px;
+$bgcolor-form: #0083BA;
+$text-color: #363636;
+$browser-context: 16; // Default
+$dir:'../fonts/';
+
+
+$Nb:  'NeoSansPro-Bold';
+$Nm: 'NeoSansPro-Medium';
+$Ni:'NeoSansPro-Italic';
+$N: 'NeoSansPro-Regular';
+$NN: 'NeoSansPro';
+$font-text: $NN;
+
+$normal: normal;
+$italic: italic;
+$bold: 700;
+$semibold: 600;
+$medium: 500;
+$heavy: 800;
+$black: 900;
+$light: 300;
+$mt:90px;    /*margin top for HEADER h1-h6*/
+$mb:50px;     /*margin top for BLOCK from header*/
