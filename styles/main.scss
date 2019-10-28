@@ -28,14 +28,19 @@ aside{
 .hidden{
 	display: none;
 }
+.bg-proz{
+	background-color: $bg-head-color;
+}
 header{
 	background-color: $bg-head-color;
-	min-height: 110px;
+	position: relative;
+	background: url(../img/bg-index.jpg) center no-repeat;
 	width: 100%;
-	color: #fff;
+	min-height: 800px;
 	.flex-header{}
 	.logou{
 		margin-top: 10px;
+		color: #fff;
 		.link{
 			a{}
 			img{
@@ -49,7 +54,10 @@ header{
 		}
 	}
 	.menu-phone{
-		padding-top: 10px;
+		padding-top: 18px;
+		min-height: 110px;
+
+		color: #fff;
 		.phone{}
 		.ph{
 			margin: 0 20px;
@@ -103,5 +111,114 @@ header{
 				background-color: #fff;
 			}
 		}
+	}
+}
+.utp{
+	text-align: center;
+	max-width: 999px;
+	padding: 0 15px;
+	margin-top: 75px;
+	margin-left: auto;
+	margin-right: auto;
+	h1{
+		text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+		  font-size: rem(39);
+		  font-weight: bold;
+		  font-stretch: normal;
+		  line-height: 1.19;
+		  letter-spacing: 0.78px;
+		  color: $h1-color;
+		span{
+			color: #fff;
+		}
+	}
+}
+.flex-cart-lp{
+	justify-content: center;
+}
+.cart-lp{
+	top: 70px;
+	position: relative;
+	.lp-item{
+		margin-left: 20px;
+		margin-right: 20px;
+		max-width: 350px;
+		width: 100%;
+		min-height: 425px;
+		position: relative;
+		text-align: center;
+		border-radius: 6px;
+		  box-shadow: 0 7px 8px 0 rgba(0, 0, 0, 0.18);
+		  background-color: rgba(126, 146, 51, 0.9);
+		.img{
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			img{
+				max-width: 250px;
+				width: 100%;
+				height: auto;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+		.ttl{
+			text-align: center;
+			h3{
+				color: #fff;
+			}
+			margin-bottom: 30px;
+		}
+		.btn{
+			a{
+				color: #fff;
+				button{}
+			}
+		}
+		.oplet{
+			position: absolute;
+			right: 0;
+			left: 0;
+			bottom: 55px;
+		}
+	}
+}
+section{
+	&.sale-index{
+		
+		.vilet-sale-index{
+			min-height: 325px;
+            background-color: $bg-color;
+			.img{
+				background-color: #fff;
+				border-radius: 6px;
+				padding: 15px;
+				flex: none;
+				@include shadow();
+				img{
+					max-width: 295px;
+					width: 100%;
+					height: auto;
+
+				}
+				margin: 15px 0;
+			}
+			.description{
+				margin-left: 42px;
+				.zag{
+					 font-size: 26px;
+					  line-height: 1.19;
+					  color: rgba(126, 146, 51, 1);
+									}
+				.txt{
+
+					p{
+						line-height: 1.51;
+					}
+				}
+			}
+		}	
 	}
 }
