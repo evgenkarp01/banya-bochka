@@ -221,4 +221,63 @@ section{
 			}
 		}	
 	}
+    &.realjobs{
+        .vilet-realjobs{
+            .flex-realjobs:nth-child(2n){
+                flex-direction: row-reverse;
+            }
+        }
+        .row-real-jobs{
+            background-color: $bg-color;
+        }
+        .oplet{
+            padding: 25px 40px;
+            position: relative;
+        }
+        .img{
+            overflow: hidden;
+            position: relative;
+            max-height: 357px;
+            img{
+                @include shadow();
+                max-height: 357px;
+                height: 100%;
+                width: auto;
+                border-radius: 5px;
+                min-width: 100%;
+            }
+        }
+        .ttl{
+            text-align: left;
+            h3{
+                 font-size: 26px;
+                  font-weight: 500;
+                  color: #b09a61;
+            }
+        }
+        .txt{
+            margin-top: 25px;
+        }
+        .foot{
+            color: $btn-color;
+            font-size: 18px;
+            text-transform: uppercase;
+            .cost{
+                margin-top: 50px;
+                svg{
+                    position: relative;
+                    top: 3px;
+                    width: 21px;
+                    height: 21px;
+                    margin-right: 10px;
+                }
+                span{
+                    font-weight: 500;
+                }
+            }
+            .offer{
+                margin-top: 10px;
+            }
+        }
+    }
 }

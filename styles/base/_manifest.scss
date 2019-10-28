@@ -110,7 +110,7 @@ input:focus, textarea:focus{
     color: $dark-color;
     h1{
         font-size: rem($h1-fz);
-        font-weight: 800;
+        font-weight: 700;
         line-height: rem($h1-fz + ($h1-fz / 6));
         text-transform: uppercase;
         font-style: normal;
@@ -119,8 +119,7 @@ input:focus, textarea:focus{
         font-size: rem($h2-fz);
         line-height: rem($h2-fz + ($h2-fz / 6));
         font-style: normal;
-        font-weight: 800;
-        text-transform: uppercase;
+        font-weight: 700;
     }
     h3{
         font-size: rem($h3-fz);

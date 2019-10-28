@@ -6,16 +6,16 @@
 @mixin font($fontname, $fweight, $fstyle, $fontfamily){
     @font-face {
         font-family: $fontfamily;
-        
-        src: url($dir+$fontname+'.eot'#iefix) format('embedded-opentype'),
-             url($dir+$fontname+'.woff') format('woff'),
-             url($dir+$fontname+'.ttf') format('truetype');
+        src: url($dir+$fontname+'.eot');
+        src: local($fontfamily), local($fontname),
+            url($dir+$fontname+'.eot?#iefix') format('embedded-opentype'),
+            url($dir+$fontname+'.woff2') format('woff2'),
+            url($dir+$fontname+'.woff') format('woff'),
+            url($dir+$fontname+'.ttf') format('truetype');
         font-weight: $fweight;
         font-style: $fstyle;
-        font-display: swap;
-
-
     }
+    
 }
 @mixin trans($time){
     transition: all $time+s;
