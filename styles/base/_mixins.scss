@@ -22,7 +22,7 @@
 }
 
 @mixin shadow(){
-   box-shadow: 0 7px 8px 0 rgba(0, 0, 0, 0.18);
+   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.18);
 }
 @mixin sprite($t, $l, $h, $w, $bpOne, $bpTwo){
     position: absolute;
