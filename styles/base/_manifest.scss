@@ -79,26 +79,32 @@ input:focus, textarea:focus{
     width: 50%;
 }
 /*/////////////////SLICK DOTS*/
-.slick-dots li button{
-  width: 20px;
-  height: 20px;
-  border: 2px solid #777;
-  border-radius: 100%;
-  &[aria-selected="true"]{
-    border: 2px solid #000;
-  }
-  &:before{
-    display: none;
-  }
+.slick-dots li{
+    margin: 0;
+    button{
+        width: 14px;
+        height: 14px;
+        border: 1px solid $accent-color;
+        border-radius: 100%;
+        &[aria-selected="true"]{
+        border: 1px solid $accent-color;
+          background: $accent-color;
+        }
+        &:before{
+        display: none;
+        }
+    }
 }
 .slick-active{
   button{
-    border: 2px solid #000 !important;
+    /*border: 2px solid #000 !important;*/
+      background: $accent-color;
   }
 }
 .slick-dots{
-  position: relative;
+  position: absolute;
   padding-top: 10px;
+    bottom: 20px;
 }
 /*/////////////////SLICK ACTIVE*/
 .slick-current .item{
