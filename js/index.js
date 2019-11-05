@@ -228,7 +228,7 @@ function hideAll(){
 
 	$("#shooche-ban-nav li").on("click", function(){
 		hideAll();
-		
+		console.log("dd");
 		var chooseDescription = $(this).attr("data-choose-ban-desc");
 		$("#choose-ban-advanse-forma > ul."+chooseDescription+" li:first").addClass("active") ;
 		$("#choose-ban-advanse-material > ul."+chooseDescription+" li:first").addClass("active") ;
