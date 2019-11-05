@@ -171,4 +171,131 @@ $( document ).ready(function() {
         gutter: 15,
         fitWidth: true
     });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**CALCULATOR**/
+
+var allCost = 0;
+var shoocheBanNavCost = 0;
+var chooseBanAdvanseMaterial = 0;
+var chooseBanAdvanseFormaCost = 0;
+$("#choose-ban-advanse-forma > ul li:first").addClass("active") ;
+$("#choose-ban-advanse-material > ul li:first").addClass("active") ;
+$("#choose-ban-advanse-forma > ul:first").show();
+$("#choose-ban-advanse-material > ul:first").show();
+$(".choose-ban-show > .img:first").show();
+$(".choose-ban-show ul > span:first").show();
+
+var aaa = Number($("#shooche-ban-nav li.active").attr("data-shooche-ban-nav"));
+var bbb = Number($("#choose-ban-advanse-material li.active").attr("data-choose-ban-advanse-material"));
+var ccc = Number($("#choose-ban-advanse-forma li.active").attr("data-choose-ban-advanse-forma"));
+
+console.log(aaa);
+
+console.log(bbb);
+
+console.log(ccc);
+
+function summ(a, b, c){
+	return a + b + c;
+}
+
+$("#allCost span").text(summ(aaa, bbb, ccc));
+
+function hideAll(){
+	$("#shooche-ban-nav li").removeClass("active") ;
+	$("#choose-ban-advanse-forma li").removeClass("active") ;
+	$("#choose-ban-advanse-material li").removeClass("active") ;
+	
+}
+
+	$("#shooche-ban-nav li").on("click", function(){
+		hideAll();
+		
+		var chooseDescription = $(this).attr("data-choose-ban-desc");
+		$("#choose-ban-advanse-forma > ul."+chooseDescription+" li:first").addClass("active") ;
+		$("#choose-ban-advanse-material > ul."+chooseDescription+" li:first").addClass("active") ;
+		shoocheBanNavCost = Number($(this).attr("data-shooche-ban-nav"));
+		chooseBanAdvanseMaterial = Number($("#choose-ban-advanse-material li.active").attr("data-choose-ban-advanse-material"));
+		chooseBanAdvanseFormaCost = Number($("#choose-ban-advanse-forma li.active").attr("data-choose-ban-advanse-forma"));
+		
+		$("#choose-ban-advanse-material > ul").hide();
+		$("#choose-ban-advanse-material > ul."+chooseDescription).show();
+		$("#choose-ban-advanse-forma > ul").hide();
+		$("#choose-ban-advanse-forma > ul."+chooseDescription).show();
+		$(".choose-ban-show ul > span").hide();
+		$(".choose-ban-show > .img").hide();
+		$(".choose-ban-show > .img."+chooseDescription).show();
+		$(".choose-ban-show ul > span."+chooseDescription).show();
+
+		if($(this).hasClass("active")){
+		}else{
+			$("#shooche-ban-nav li").removeClass("active");
+			$(this).toggleClass("active");
+		}
+		allCost = summ(shoocheBanNavCost, chooseBanAdvanseMaterial,chooseBanAdvanseFormaCost);
+		$("#allCost span").text(allCost);
+	});
+
+	$("#choose-ban-advanse-forma li").on("click", function(){
+		shoocheBanNavCost = Number($("#shooche-ban-nav li.active").attr("data-shooche-ban-nav"));
+		chooseBanAdvanseMaterial = Number($("#choose-ban-advanse-material li.active").attr("data-choose-ban-advanse-material"));
+		chooseBanAdvanseFormaCost = Number($(this).attr("data-choose-ban-advanse-forma"))
+		var chooseDescriptionForma = $(this).attr("data-choose-ban-advanse-img");
+		$(".choose-ban-show > .img").hide();
+		$(".choose-ban-show > .img."+chooseDescriptionForma).show();
+		console.log("span."+chooseDescriptionForma);
+		if($(this).hasClass("active")){
+		}else{
+			$("#choose-ban-advanse-forma li").removeClass("active");
+			$(this).toggleClass("active");
+		}
+		allCost = summ(shoocheBanNavCost, chooseBanAdvanseMaterial,chooseBanAdvanseFormaCost);
+		$("#allCost span").text(allCost);
+	});
+
+	$("#choose-ban-advanse-material li").on("click", function(){
+		shoocheBanNavCost = Number($("#shooche-ban-nav li.active").attr("data-shooche-ban-nav"));
+		chooseBanAdvanseMaterial = Number($(this).attr("data-choose-ban-advanse-material"));
+		chooseBanAdvanseFormaCost = Number($("#choose-ban-advanse-forma li.active").attr("data-choose-ban-advanse-forma"))
+		
+		if($(this).hasClass("active")){
+		}else{
+			$("#choose-ban-advanse-material li").removeClass("active");
+			$(this).toggleClass("active");
+		}
+		allCost = summ(shoocheBanNavCost, chooseBanAdvanseMaterial,chooseBanAdvanseFormaCost);
+		$("#allCost span").text(allCost);
+	});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 })

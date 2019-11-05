@@ -527,6 +527,7 @@ section{
         }
         .choose-ban-show{
             .img{
+            	display: none;
                 img{
                     max-width: 300px;
                     width: 100%;
@@ -544,6 +545,9 @@ section{
                         span{
                             font-weight: 500;
                         }
+                    }
+                    & > span{
+                    	display: none;
                     }
                 }
             }
@@ -584,6 +588,9 @@ section{
                             background-color: #e2e2e0;
                         }
                     }
+                }
+                & > ul{
+                	display: none;
                 }
             }
             
